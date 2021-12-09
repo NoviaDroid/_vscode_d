@@ -1,0 +1,337 @@
+// Place your key bindings in this file to override the defaults
+[
+	{
+		"key": "space",
+		"command": "vspacecode.space",
+		"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+	},
+	{
+		"key": "space",
+		"command": "vspacecode.space",
+		"when": "sideBarFocus && !inputFocus && !whichkeyActive"
+	},
+	{
+		"key": "tab",
+		"command": "extension.vim_tab",
+		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
+	},
+	{
+		"key": "tab",
+		"command": "-extension.vim_tab",
+		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"key": "x",
+		"command": "magit.discard-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "k",
+		"command": "-magit.discard-at-point"
+	},
+	{
+		"key": "-",
+		"command": "magit.reverse-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "v",
+		"command": "-magit.reverse-at-point"
+	},
+	{
+		"key": "shift+-",
+		"command": "magit.reverting",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+v",
+		"command": "-magit.reverting"
+	},
+	{
+		"key": "shift+o",
+		"command": "magit.resetting",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+x",
+		"command": "-magit.resetting"
+	},
+	{
+		"key": "x",
+		"command": "-magit.reset-mixed"
+	},
+	{
+		"key": "ctrl+u x",
+		"command": "-magit.reset-hard"
+	},
+	{
+		"key": "y",
+		"command": "-magit.show-refs"
+	},
+	{
+		"key": "y",
+		"command": "vspacecode.showMagitRefMenu",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.quickOpenSelectNext",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "acceptSelectedSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "showNextParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "showPrevParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "file-browser.stepOut",
+		"when": "inFileBrowser"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "file-browser.stepIn",
+		"when": "inFileBrowser"
+	},
+	{
+		"key": "shift+cmd+m",
+		"command": "-workbench.actions.view.problems",
+		"when": "workbench.panel.markers.view.active"
+	},
+	{
+		"key": "shift+cmd+m",
+		"command": "workbench.action.maximizeEditor"
+	},
+	{
+		"key": "shift+cmd+e",
+		"command": "-workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "shift+cmd+p",
+		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "shift shift",
+		"command": "workbench.action.showCommands"
+	},
+	{
+		"key": "shift+cmd+p",
+		"command": "-workbench.action.showCommands"
+	},
+	{
+		"key": "shift+cmd+p",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "shift+cmd+f",
+		"command": "-workbench.view.search",
+		"when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+	},
+	{
+		"key": "shift+cmd+f",
+		"command": "-workbench.action.terminal.searchWorkspace",
+		"when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+	},
+	{
+		"key": "shift+cmd+n",
+		"command": "-workbench.action.newWindow"
+	},
+	{
+		"key": "shift+cmd+f",
+		"command": "-workbench.action.findInFiles"
+	},
+	{
+		"key": "shift+alt+f",
+		"command": "-filesExplorer.findInFolder",
+		"when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "shift+cmd+n",
+		"command": "workbench.action.findInFiles"
+	},
+	{
+		"key": "cmd+k cmd+f",
+		"command": "-editor.action.formatSelection",
+		"when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+cmd+f",
+		"command": "editor.action.formatSelection"
+	},
+	{
+		"key": "cmd+e",
+		"command": "-actions.findWithSelection"
+	},
+	{
+		"key": "cmd+p",
+		"command": "-workbench.action.quickOpen"
+	},
+	{
+		"key": "cmd+e",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "cmd+o",
+		"command": "-workbench.action.files.openLocalFileFolder",
+		"when": "remoteFileDialogVisible"
+	},
+	{
+		"key": "cmd+o",
+		"command": "-workbench.action.files.openFileFolder",
+		"when": "isMacNative && openFolderWorkspaceSupport"
+	},
+	{
+		"key": "cmd+o",
+		"command": "-workbench.action.files.openFile",
+		"when": "false"
+	},
+	{
+		"key": "ctrl+-",
+		"command": "-workbench.action.quickInputBack",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "ctrl+-",
+		"command": "-workbench.action.navigateBack"
+	},
+	{
+		"key": "cmd+i",
+		"command": "-editor.action.triggerSuggest",
+		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+i",
+		"command": "-toggleSuggestionDetails",
+		"when": "suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+-",
+		"command": "-workbench.action.navigateForward"
+	},
+	{
+		"key": "cmd+.",
+		"command": "-workbench.action.terminal.sendSequence",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "cmd+1",
+		"command": "-workbench.action.focusFirstEditorGroup"
+	},
+	{
+		"key": "cmd+1",
+		"command": "editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+.",
+		"command": "-editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+1",
+		"command": "problems.action.showQuickFixes",
+		"when": "problemFocus"
+	},
+	{
+		"key": "cmd+.",
+		"command": "-problems.action.showQuickFixes",
+		"when": "problemFocus"
+	},
+	{
+		"key": "shift+alt+f12",
+		"command": "-references-view.findReferences",
+		"when": "editorHasReferenceProvider"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "-workbench.action.terminal.findPrevious",
+		"when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "-editor.action.previousMatchFindAction",
+		"when": "editorFocus"
+	},
+	{
+		"key": "shift+f12",
+		"command": "-editor.action.goToReferences",
+		"when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "shift+cmd+g",
+		"command": "editor.action.goToReferences"
+	},
+	{
+		"key": "shift+f10",
+		"command": "-editor.action.showContextMenu",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+cmd+;",
+		"command": "-breadcrumbs.focus",
+		"when": "breadcrumbsPossible"
+	},
+	{
+		"key": "cmd+;",
+		"command": "editor.action.showContextMenu"
+	},
+	{
+		"key": "cmd+k cmd+q",
+		"command": "-workbench.action.navigateToLastEditLocation"
+	},
+	{
+		"key": "ctrl+cmd+f",
+		"command": "-workbench.action.toggleFullScreen",
+		"when": "!isIOS"
+	},
+	{
+		"key": "cmd+k z",
+		"command": "-workbench.action.toggleZenMode"
+	},
+	{
+		"key": "ctrl+cmd+f",
+		"command": "workbench.action.toggleZenMode"
+	},
+	{
+		"key": "cmd+.",
+		"command": "editor.action.marker.next",
+		"when": "editorFocus"
+	},
+	{
+		"key": "cmd+o",
+		"command": "extension.vim_ctrl+o",
+		"when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+i",
+		"command": "extension.vim_ctrl+i",
+		"when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+	}
+]
